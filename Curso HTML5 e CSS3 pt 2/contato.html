@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contato - Barbearia Alura</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="caixa">
+            <h1><img src="logo.png" alt="Logo da Barberia Alura"></h1>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <form>
+            <!--tag form para criar um formulario -->
+            <label for="nomesobrenome">Nome e sobrenome</label>
+            <!-- etiqueta para entrada de dados para o <input>, o for e o id serve para facilitar o usuario, so de clicar no texto nome e sobrenome, o campo fica azul pra digitar-->
+            <input type="text" id="nomesobrenome" class="input-padrao" required>
+            <!--required faz voltar para o campo obrigatório-->
+            <!--tipo texto para o usuario digitar -->
+
+            <label for="email">Email</label>
+            <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
+            <!--tag define um controle de entrada de texto de várias linhas, usado em forms pra coletar comentarios.-->
+
+            <fieldset>
+                <legend class="teste" id="teste">Como prefere o nosso contato?</legend>
+                <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+
+                <!--o name nos 3 input, serve pra desmacar uma bolinha se clicar na outra, ou seja, é necessário para referenciar os dados dos forms, se omitir o name, nenhum dado da área de texto será enviado-->
+
+                <label for="radio-telefone"><input type="radio" name="contato" value="telefone"
+                        id="radio-telefone">Telefone</label>
+
+                <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp"
+                        checked>WhatsApp</label>
+            </fieldset>
+
+            <fieldset>
+                <!--tag é usada para agrupar elementos relacionados em um formulário.-->
+                <legend>Qual horário prefere ser atendido?</legend>
+                <!--usada pra definir  aledenga para o fieldset-->
+                <select>
+                    <!--essa tag select é pra uma lista de opções, usado em forms-->
+                    <option>Manhã</option>
+                    <!--essa tag options definem as opções disponíveis na lista-->
+                    <option>Tarde</option>
+                    <option>Noite</option>
+                </select>
+            </fieldset>
+
+            <label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por
+                email?</label>
+
+            <input type="submit" value="Enviar formulário" class="enviar">
+            <!--submit = envio de dados, value é pra aparecer sempre a frase digitada-->
+        </form>
+
+        <table>
+            <!--tag para criar tabela,  -->
+            <thead>
+                <!--thead é o cabeçalho da tabela, a tag th representa a célula do cabeçalho da tabela-->
+                <tr>
+                    <th>Dia</th>
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--A tag tbody, que representa o corpo da tabela, a tag <tr> são linhas, <td> são células-->
+                <tr>
+                    <td>Segunda</td>
+                    <td>08h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Quarta</td>
+                    <td>08h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Sexta</td>
+                    <td>08h ~ 20h</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+
+    <footer>
+        <img src="logo-branco.png" alt="Logo da Barberia Alura>
+        <p class=" copyright">&copy; Copyright Barberia Alura - 2022</p>
+    </footer>
+</body>
+
+</html>
